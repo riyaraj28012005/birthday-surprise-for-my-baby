@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday ❤️</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#ff9a9e,#fad0c4,#fad0c4);
+overflow:hidden;
+}
+
+.container{
+text-align:center;
+color:white;
+}
+
+h1{
+font-size:60px;
+animation:glow 2s infinite alternate;
+margin-bottom:20px;
+}
+
+@keyframes glow{
+from{
+text-shadow:0 0 10px white,0 0 20px pink;
+}
+to{
+text-shadow:0 0 20px white,0 0 40px red;
+}
+}
+
+p{
+font-size:25px;
+margin-bottom:20px;
+}
+
+button{
+padding:12px 30px;
+font-size:20px;
+border:none;
+border-radius:30px;
+background:white;
+color:#ff4d6d;
+cursor:pointer;
+transition:.3s;
+font-weight:bold;
+}
+
+button:hover{
+transform:scale(1.1);
+background:#ffe6ec;
+}
+
+.hidden{
+display:none;
+}
+
+.gift{
+font-size:120px;
+cursor:pointer;
+animation:bounce 1s infinite;
+margin-top:20px;
+}
+
+@keyframes bounce{
+50%{
+transform:translateY(-15px);
+}
+}
+
+.message{
+background:white;
+color:#ff4d6d;
+padding:20px;
+border-radius:20px;
+width:80%;
+max-width:500px;
+margin:auto;
+margin-top:20px;
+font-size:22px;
+line-height:1.7;
+box-shadow:0 0 20px rgba(0,0,0,.2);
+animation:fade 1s;
+}
+
+@keyframes fade{
+from{
+opacity:0;
+transform:scale(.7);
+}
+to{
+opacity:1;
+transform:scale(1);
+}
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<h1>🎉 Happy Birthday My Love ❤️</h1>
+
+<div id="question">
+<p>Can I make your birthday a little more special? 🥺❤️</p>
+
+<button onclick="showGift()">Yes 💖</button>
+</div>
+
+<div id="giftSection" class="hidden">
+
+<p>Click the gift to open it 🎁</p>
+
+<div class="gift" onclick="openGift()">🎁</div>
+
+</div>
+
+<div id="msg" class="hidden message">
+
+<h2>💌 I'm Sorry ❤️</h2>
+
+<br>
+
+<p>
+Happy Birthday, My Love. ❤️<br><br>
+
+I know I've made mistakes and maybe hurt you in ways I never wanted to.
+I'm truly sorry for everything.
+
+You mean so much to me, and I never want to lose you.
+Thank you for being such an amazing person.
+
+On your special day, I only wish for your happiness, your beautiful smile,
+and maybe... one chance to make everything right again.
+
+❤️ Happy Birthday Once Again ❤️
+
+</p>
+
+</div>
+
+</div>
+
+<script>
+
+function showGift(){
+document.getElementById("question").style.display="none";
+document.getElementById("giftSection").classList.remove("hidden");
+}
+
+function openGift(){
+document.getElementById("giftSection").style.display="none";
+document.getElementById("msg").classList.remove("hidden");
+}
+
+</script>
+
+</body>
+</html>
